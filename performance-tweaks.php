@@ -17,6 +17,10 @@ if ( ! apply_filter( 'wpcom_vip_disable_adjacent_posts', false ) ) {
 	include_once 'core-fix-disable-adjacent-posts.php';
 }
 
-if ( ! apply_filter( 'wpcom_vip_disable_instapost', false ) ) {
-	include_once 'core-fix-disable-instapost.php';
+if ( ! apply_filter( 'wpcom_vip_disable_post_modified_query', false ) ) {
+	include_once 'core-fix-latest-post-modified.php';
+}
+
+if ( ! apply_filter( 'wpcom_vip_disable_include_children_query', false ) ) {
+	include_once 'core-fix-disable-include-children-query.php';
 }
