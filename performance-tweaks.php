@@ -20,7 +20,3 @@ if ( ! apply_filter( 'wpcom_vip_disable_adjacent_posts', false ) ) {
 if ( ! apply_filter( 'wpcom_vip_disable_instapost', false ) ) {
 	include_once 'core-fix-disable-instapost.php';
 }
-
-if ( ! apply_filter( 'wpcom_vip_enable_old_slug_redirect_cache', false ) ) {
-	include_once 'core-fix-old-slug-redirect-caching.php';
-}

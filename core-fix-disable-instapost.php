@@ -6,6 +6,6 @@
 /**
  * Disables instapost since it is rarely used
  */
-if ( function_exists('wpcom_vip_disable_instapost') ) {
-	wpcom_vip_disable_instapost();
+function wpcom_vip_disable_instapost() {
+	remove_action( 'init', array( 'Instapost', 'init' ) );
 }
