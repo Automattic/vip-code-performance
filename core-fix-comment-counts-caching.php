@@ -38,6 +38,4 @@ function wpcom_vip_cache_full_comment_counts( $counts = false , $post_id = 0 ){
  * Improves performance of all the wp-admin pages that load comment counts in the menu. This caches them for 30 minutes.
  * It does not impact the per page comment count, only the total comment count that shows up in the admin menu.
  */
-function wpcom_vip_enable_cache_full_comment_counts() {
-	add_filter( 'wp_count_comments', 'wpcom_vip_cache_full_comment_counts', 10, 2 );
-}
+add_filter( 'wp_count_comments', 'wpcom_vip_cache_full_comment_counts', 10, 2 );
