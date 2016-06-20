@@ -24,3 +24,7 @@ if ( ! apply_filter( 'wpcom_vip_disable_post_modified_query', false ) ) {
 if ( ! apply_filter( 'wpcom_vip_disable_include_children_query', false ) ) {
 	include_once 'core-fix-disable-include-children-query.php';
 }
+
+if ( ! apply_filter( 'wpcom_vip_enable_update_term_count', false ) ) {
+	include_once 'core-fix-update-term-count.php';
+}
