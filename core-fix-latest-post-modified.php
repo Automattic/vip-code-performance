@@ -54,9 +54,6 @@ function wpcom_get_lastpostmodified( $date, $timezone ) {
 }
 add_filter( 'pre_get_lastpostmodified', 'wpcom_get_lastpostmodified', 10, 2 );
 
-// Invalidate the feed when we get a new comment. We have comment counts in the feed
-add_action( 'wp_update_comment_count', 'wpcom_invalidate_post_data' );
-
 add_action( 'transition_post_status', 'wpcom_maybe_invalidate_feed_cache_on_post_transition', 10, 3 );
 function wpcom_maybe_invalidate_feed_cache_on_post_transition( $new_status, $old_status, $post ) {
 	if ( ! in_array( 'publish', array( $old_status, $new_status ) ) )
